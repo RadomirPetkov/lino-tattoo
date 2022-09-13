@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    display: flex;
+    gap: 1%;
+}
+
+#sidebar-wrapper {
+    padding: 20px;
+    margin: 0;
+    background: #111111;
+    text-align: center;
+    align-content: center;
+}
+
+#sidebar-wrapper li {
+    list-style: none;
+    color: wheat;
+    padding: 20px 40px;
+    border-radius: 15px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+
+
+#sidebar-wrapper li a {
+    color: wheat;
+    text-decoration: none;
+    font-family: 'Old Standard TT', serif;
+    
+}
+
+#sidebar-wrapper li:hover {
+
+    background-color: #bb9d52;
+}
+
+.logo-sidebar a img {
+    width: 80px;
+    border-radius: 40px;
+}
+
+
+
+
+.sidebar-name a {
+    text-decoration: none;
+    color: white;
+    width: 80px;
+    border-radius: 40px;
+    font-family: 'Merienda One', cursive;
+}
+
+.target {
+    color: #bb9d52;
+
+}
+
+
+
+/* @font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+        format("woff");
+  } */
