@@ -63,7 +63,7 @@ export const Home = () => {
                         <h3 className="heading"><span className="target">LINO</span> TATTOO</h3>
 
                         <h4 className="lead">
-                            Най-доброто място в София за избор на тапети за Вашия дом!
+                            Най-доброто студио в София за избора на всеки!
                         </h4>
                     </div>
 
