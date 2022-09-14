@@ -1,4 +1,6 @@
 import logo from "./logo.jpg"
+import background from "./4.jpg"
+import "./home.css"
 
 export const Home = () => {
 
@@ -48,85 +50,28 @@ export const Home = () => {
                 <a href="#menu-toggle" className="menuopener" id="menu-toggle">
                     <i className="fa fa-bars" />
                 </a>
-                <div
-                    id="home"
-                    className="parallax first-section"
-                    data-stellar-background-ratio="0.4"
-                    style={{ backgroundImage: 'url("uploads/barber_slider.jpg")' }}
-                >
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div id="full-width" className="owl-carousel owl-theme">
-                                <div className="text-center item">
-                                    <div className="col-md-8 col-md-offset-2 col-sm-12">
-                                        <div className="big-tagline text-center">
-                                            <h2>
-                                                <strong>The Barber Shop</strong>
-                                                <br />
-                                                in New York
-                                            </h2>
-                                            <p className="lead">
-                                                With SMBarber responsive landing page template, you can
-                                                showcase your next barber shop websites!
-                                            </p>
-                                            <a
-                                                href="#"
-                                                className="btn btn-light btn-radius btn-brd grd1 effect-1 butn"
-                                            >
-                                                APPOINTMENT NOW
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="text-center item">
-                                    <div className="col-md-8 col-md-offset-2 col-sm-12">
-                                        <div className="big-tagline text-center">
-                                            <h2>
-                                                <strong>The Barber Shop</strong>
-                                                <br />
-                                                in New York
-                                            </h2>
-                                            <p className="lead">
-                                                With SMBarber responsive landing page template, you can
-                                                showcase your next barber shop websites!
-                                            </p>
-                                            <a
-                                                href="#"
-                                                className="btn btn-light btn-radius btn-brd grd1 effect-1 butn"
-                                            >
-                                                APPOINTMENT NOW
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="text-center item">
-                                    <div className="col-md-8 col-md-offset-2 col-sm-12">
-                                        <div className="big-tagline text-center">
-                                            <h2>
-                                                <strong>The Barber Shop</strong>
-                                                <br />
-                                                in New York
-                                            </h2>
-                                            <p className="lead">
-                                                With SMBarber responsive landing page template, you can
-                                                showcase your next barber shop websites!
-                                            </p>
-                                            <a
-                                                href="#"
-                                                className="btn btn-light btn-radius btn-brd grd1 effect-1 butn"
-                                            >
-                                                APPOINTMENT NOW
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* end row */}
+
+                <div className="container-fluid" id="first-section">
+
+                    <img src={background}></img>
+
+                    <div className="heading-text">
+                        <h2>
+                            Добре дошли в сайта на
+                        </h2>
+
+                        <h3 className="heading"><span className="target">LINO</span> TATTOO</h3>
+
+                        <h4 className="lead">
+                            Най-доброто място в София за избор на тапети за Вашия дом!
+                        </h4>
                     </div>
-                    {/* end container */}
+
                 </div>
-                {/* end section */}
+                {/* end container */}
+
+
+
                 <section className="section nopad cac text-center">
                     <a href="#">
                         <h3>
