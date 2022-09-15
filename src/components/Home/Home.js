@@ -9,18 +9,14 @@ export const Home = () => {
 
     return <>
         <div id="page-content-wrapper">
-            <a href="#menu-toggle" className="menuopener" id="menu-toggle">
-                <i className="fa fa-bars" />
-            </a>
+           
 
             <div className="container-fluid" id="first-section">
 
-                <img src={background}></img>
+                <img  src={background}></img>
 
                 <div className="heading-text">
-                    {/* <h2>
-                            Добре дошли в сайта на
-                        </h2> */}
+                   
 
                     <h3 className="heading"><span className="target">LINO</span> TATTOO</h3>
 

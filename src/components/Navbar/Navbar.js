@@ -1,44 +1,42 @@
 import logo from "./logo.jpg"
 import "./navbar.css"
+import { Link } from "react-router-dom"
 
-
-export const Navbar = () =>{
+export const Navbar = () => {
 
 
 
     return <div id="sidebar-wrapper">
-    <div className="side-top">
-        <div className="logo-sidebar">
-            <a href="index.html">
-                <img src={logo} alt="imageee" />
-            </a>
+        <div className="side-top">
+            <div className="logo-sidebar">
+                <Link to={'/'} className="link">
+                    <img src={logo} alt="imageee" />
+                </Link>
+            </div>
+            <div className="sidebar-name">
+                <Link className="link" to={'/'}><span className="target">LINO</span> Tattoo</Link>
+            </div>
+            <ul className="sidebar-nav">
+                <li>
+                    <Link className="link" to={'/'}>
+                        Начало
+                    </Link>
+                </li>
+                <li>
+                    <Link to={'/about'}>За нас</Link>
+                </li>
+                <li>
+                    <Link to={'/gallery'}>Галерия</Link>
+                </li>
+                <li>
+                    <Link to={'/services'}>Цени</Link>
+                </li>
+
+                <li>
+                    <Link to={'/contacts'}>Контакти</Link>
+                </li>
+            </ul>
         </div>
-        <div className="sidebar-name">
-            <a href="index.html"><span className="target">LINO</span> Tattoo</a>
-        </div>
-        <ul className="sidebar-nav">
-            <li>
-                <a className="active" href="index.html">
-                    Начало
-                </a>
-            </li>
-            <li>
-                <a href="about.html">За нас</a>
-            </li>
-            <li>
-                <a href="services.html">Услуги</a>
-            </li>
-            <li>
-                <a href="barbers.html">Татуисти</a>
-            </li>
-            <li>
-                <a href="appointment.html">Галерия</a>
-            </li>
-            <li>
-                <a href="contact.html">Контакти</a>
-            </li>
-        </ul>
     </div>
-</div>
-{/* End Sidebar-wrapper */}
+    {/* End Sidebar-wrapper */ }
 }
