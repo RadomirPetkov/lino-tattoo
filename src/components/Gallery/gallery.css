@@ -48,9 +48,14 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    padding-top: 35px;
 }
 
 .gallery-tattoo-images img{
     max-height: 20vw;
     border-radius: 300px;
 }
+
+.tattoo-styles li{
+list-style: none;
+padding-top: 20px}
