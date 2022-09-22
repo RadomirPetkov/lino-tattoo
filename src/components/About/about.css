@@ -1,0 +1,14 @@
+#studio-img{
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+#studio-img img{
+    border-radius: 150px;
+    width: 30vw;
+}
+
+.section{
+    text-align: center;
+}

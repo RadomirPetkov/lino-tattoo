@@ -1,6 +1,7 @@
 import background from "./4.jpg"
 import lino from "./lino.jpg"
 import "./home.css"
+import {Link} from "react-router-dom"
 
 export const Home = () => {
 
@@ -49,9 +50,9 @@ export const Home = () => {
                         <p>Работим само с предвариетлно запазен час, като работното ни време е изключително гъвкаво.</p>
                         <br />
                         <div className="link-btn">
-                            <a href="#services" className="btn">
+                            <Link to="/about" className="btn">
                                 Научете повече за нас
-                            </a>
+                            </Link>
                         </div>
                     </section>
 
@@ -65,9 +66,9 @@ export const Home = () => {
                         <p>Консултацията е напълно безплатна, като можете да разгледате част от нашият каталог както ако ни посетите на място така и чрез нашата галерия.</p>
                         <br />
                         <div className="link-btn">
-                            <a href="#services" className="btn">
+                            <Link to="./gallery" className="btn">
                                 Нашата галерия
-                            </a>
+                            </Link>
                         </div>
                     </section>
 
