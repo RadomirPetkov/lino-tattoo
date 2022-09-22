@@ -29,7 +29,7 @@ export const Navbar = () => {
                     <Link to={'/gallery'}>Галерия</Link>
                 </li>
                 <li>
-                    <Link to={'/services'}>Цени</Link>
+                    <Link to={'/prices'}>Цени</Link>
                 </li>
 
                 <li>

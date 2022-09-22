@@ -40,7 +40,7 @@ export const About = () => {
 
 
             <div className="link-btn">
-                <Link to="./contacts" className="btn">
+                <Link to="/contacts" className="btn">
                     Контакти
                 </Link>
             </div>

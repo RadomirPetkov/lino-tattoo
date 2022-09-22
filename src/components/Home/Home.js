@@ -66,7 +66,7 @@ export const Home = () => {
                         <p>Консултацията е напълно безплатна, като можете да разгледате част от нашият каталог както ако ни посетите на място така и чрез нашата галерия.</p>
                         <br />
                         <div className="link-btn">
-                            <Link to="./gallery" className="btn">
+                            <Link to="/gallery" className="btn">
                                 Нашата галерия
                             </Link>
                         </div>
