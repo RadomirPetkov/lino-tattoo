@@ -9,6 +9,7 @@ import { Contacts } from './components/Contacts/Contacts';
 import { Prices } from './components/Prices/Prices';
 
 function App() {
+
   return (
     <Wrapper>
     <div id="wrapper">

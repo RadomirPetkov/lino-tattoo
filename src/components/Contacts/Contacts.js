@@ -1,9 +1,10 @@
 import background from "../hand.jpg"
-import { Link } from "react-router-dom"
-
+import "./contacts.css"
+import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
+import { REACT_APP_GOOGLE_MAPS_API_KEY } from "../../.config"
 
 export const Contacts = () => {
-
+    const { isLoaded } = useLoadScript({ googleMapsApiKey: REACT_APP_GOOGLE_MAPS_API_KEY })
 
 
     return <div id="page-content-wrapper">
@@ -30,11 +31,37 @@ export const Contacts = () => {
 
             </div>
 
-           
+            <div className="contact-section">
+                <div className="contact-box">
+                    <i className="bi-telephone-fill"></i>
+                    <p>0898836373</p>
+                </div>
+                <div className="contact-box">
+                    <i className="bi-geo-alt-fill"></i>
+                    <p>бул. „Добринова скала“ 365, 1336 ж.к. Люлин 3, София</p>
 
+                </div>
+                <div className="contact-box">
+                    <i className="bi-globe"></i>
+                    <p>Посетете нашата фейсбук страница</p>
+                    <a href="https://www.facebook.com/LinoTatto" target="_blank">Lino tattoo</a>
+                </div>
+            </div>
+
+            <div className="map-section">
+                <div className="contact-form">
+                    <p>Contact from</p>
+                </div>
+                {isLoaded
+                    ?<GoogleMap zoom={12} center={{ lat: 42.71353402268442, lng: 23.29691354047912 }} mapContainerClassName="map-container">
+                        <MarkerF  position={{ lat: 42.72367589472162, lng: 23.2420315576713 }} />
+                        </GoogleMap>
+
+                    
+                    : <p>loading..</p>}
+            </div>
 
         </section>
-
 
 
     </div>
