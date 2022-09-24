@@ -50,14 +50,35 @@ export const Contacts = () => {
 
             <div className="map-section">
                 <div className="contact-form">
-                    <p>Contact from</p>
+
+                    <form id="send-message">
+                        <div className="contact-name">
+                            <label htmlFor="name">Име</label>
+                            <input placeholder="Иван Иванов"></input>
+                        </div>
+                        <div className="contact-phone">
+                            <label htmlFor="phone">Телефон</label>
+                            <input placeholder="088*******"></input>
+                        </div>
+                        <div className="contact-email">
+                            <label htmlFor="email">Email</label>
+                            <input placeholder="sample@gmail.com" input="email"></input>
+                        </div>
+                        <div className="contact-message">
+                            <label htmlFor="message">Съобщение</label>
+                            <input placeholder=""></input>
+                        </div>
+                        <div>
+                            <button className="contact-button btn" type="submit"> Изпрати</button>
+                        </div>
+                    </form>
                 </div>
                 {isLoaded
-                    ?<GoogleMap zoom={12} center={{ lat: 42.71353402268442, lng: 23.29691354047912 }} mapContainerClassName="map-container">
-                        <MarkerF  position={{ lat: 42.72367589472162, lng: 23.2420315576713 }} />
-                        </GoogleMap>
+                    ? <GoogleMap zoom={12} center={{ lat: 42.71353402268442, lng: 23.29691354047912 }} mapContainerClassName="map-container">
+                        <MarkerF position={{ lat: 42.72367589472162, lng: 23.2420315576713 }} />
+                    </GoogleMap>
 
-                    
+
                     : <p>loading..</p>}
             </div>
 

@@ -10,39 +10,109 @@
     border: 3px solid;
     padding: 20px;
     background-color: aliceblue;
-    border-radius: 80px;
+    border-radius: 180px;
 }
 
-.contact-box i{
+.contact-box i {
     font-size: 100px;
     color: green;
 }
 
-.contact-box p{
+.contact-box p {
     margin-top: 30px;
 }
 
-.contact-box a{
-color: blue;
+.contact-box a {
+    color: blue;
 }
 
 .map-container {
     width: 45%;
     margin: auto;
-    height: 50vh;
+    height: 60vh;
     border-radius: 50px;
 }
 
-.map-section{
+.map-section {
     display: flex;
     justify-content: space-evenly;
     margin-top: 60px;
 }
 
-.contact-form{
+.contact-form {
     margin-left: 4%;
     width: 45%;
     border: 3px solid;
     border-radius: 60px;
+    background-color: aliceblue;
+
 }
 
+#send-message {
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        "name phone"
+        "email email"
+        "message message"
+        "button button";
+    text-align: left;
+    padding: 30px;
+    gap: 20px;
+}
+
+#send-message input {
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 2vw;
+    padding-left: 10px;
+
+}
+
+#send-message label {
+    font-size: 20pt;
+}
+
+.contact-name {
+    grid-area: name;
+}
+
+.contact-name input {
+    width: 80%
+}
+
+.contact-phone {
+    grid-area: phone;
+}
+
+.contact-phone input {
+    width: 70%;
+}
+
+.contact-email {
+    grid-area: email;
+}
+
+.contact-email input {
+    width: 35%;
+}
+
+.contact-message {
+    grid-area: message;
+}
+
+#send-message .contact-message input{
+    width: 100%;
+    margin-left: 0;
+    height: 10vw;
+}
+
+
+
+.contact-button {
+    grid-area: button;
+    margin-left: 100%;
+    height: 3vw;
+    width: 35%;
+    cursor: pointer;
+}
