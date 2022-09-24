@@ -1,11 +1,25 @@
 import background from "../hand.jpg"
 import "./contacts.css"
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
-import { REACT_APP_GOOGLE_MAPS_API_KEY } from "../../.config"
+import { REACT_APP_GOOGLE_MAPS_API_KEY, YOUR_PUBLIC_KEY, YOUR_SERVICE_ID, YOUR_TEMPLATE_ID } from "../../.config"
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 export const Contacts = () => {
     const { isLoaded } = useLoadScript({ googleMapsApiKey: REACT_APP_GOOGLE_MAPS_API_KEY })
 
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, YOUR_PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     return <div id="page-content-wrapper">
 
@@ -51,22 +65,22 @@ export const Contacts = () => {
             <div className="map-section">
                 <div className="contact-form">
 
-                    <form id="send-message">
+                    <form ref={form} onSubmit={sendEmail} id="send-message">
                         <div className="contact-name">
                             <label htmlFor="name">Име</label>
-                            <input placeholder="Иван Иванов"></input>
+                            <input type="text" name="name" placeholder="Иван Иванов"></input>
                         </div>
                         <div className="contact-phone">
                             <label htmlFor="phone">Телефон</label>
-                            <input placeholder="088*******"></input>
+                            <input name="phone" placeholder="088*******"></input>
                         </div>
                         <div className="contact-email">
                             <label htmlFor="email">Email</label>
-                            <input placeholder="sample@gmail.com" input="email"></input>
+                            <input name="email" placeholder="sample@gmail.com" input="email"></input>
                         </div>
                         <div className="contact-message">
                             <label htmlFor="message">Съобщение</label>
-                            <input placeholder=""></input>
+                            <input name="message" placeholder=""></input>
                         </div>
                         <div>
                             <button className="contact-button btn" type="submit"> Изпрати</button>

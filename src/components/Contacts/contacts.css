@@ -77,8 +77,9 @@
     grid-area: name;
 }
 
-.contact-name input {
-    width: 80%
+#send-message .contact-name input {
+    margin-left: 25px;
+    width: 75%
 }
 
 .contact-phone {
@@ -86,7 +87,7 @@
 }
 
 .contact-phone input {
-    width: 70%;
+    width: 65%;
 }
 
 .contact-email {
