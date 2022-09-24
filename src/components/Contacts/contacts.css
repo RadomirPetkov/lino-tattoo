@@ -69,6 +69,16 @@
 
 }
 
+#send-message textarea {
+    margin-left: 10px;
+    border-radius: 20px;
+    height: 2vw;
+    padding-left: 10px;
+    resize: none;
+    font-size: large;
+    padding: 20px;
+}
+
 #send-message label {
     font-size: 20pt;
 }
@@ -102,10 +112,11 @@
     grid-area: message;
 }
 
-#send-message .contact-message input{
+#send-message .contact-message textarea {
     width: 100%;
     margin-left: 0;
-    height: 10vw;
+    height: 15vw;
+    justify-content: start;
 }
 
 
@@ -116,4 +127,18 @@
     height: 3vw;
     width: 35%;
     cursor: pointer;
+}
+
+.message-send{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20em;
+    height: 5em;
+    background-color: green;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5em;
+    font-size: 1.2em;
 }

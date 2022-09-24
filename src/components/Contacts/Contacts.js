@@ -2,12 +2,12 @@ import background from "../hand.jpg"
 import "./contacts.css"
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api"
 import { REACT_APP_GOOGLE_MAPS_API_KEY, YOUR_PUBLIC_KEY, YOUR_SERVICE_ID, YOUR_TEMPLATE_ID } from "../../.config"
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const Contacts = () => {
     const { isLoaded } = useLoadScript({ googleMapsApiKey: REACT_APP_GOOGLE_MAPS_API_KEY })
-
+    const [messageSend, setMessageSent] = useState(false)
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -15,6 +15,8 @@ export const Contacts = () => {
 
         emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, YOUR_PUBLIC_KEY)
             .then((result) => {
+                setMessageSent(true)
+                e.target.reset()
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
@@ -63,6 +65,7 @@ export const Contacts = () => {
             </div>
 
             <div className="map-section">
+                {messageSend && <div className="message-send">Успешно изпратихте вашето запитване!</div>}
                 <div className="contact-form">
 
                     <form ref={form} onSubmit={sendEmail} id="send-message">
@@ -80,7 +83,7 @@ export const Contacts = () => {
                         </div>
                         <div className="contact-message">
                             <label htmlFor="message">Съобщение</label>
-                            <input name="message" placeholder=""></input>
+                            <textarea name="message" placeholder=""></textarea>
                         </div>
                         <div>
                             <button className="contact-button btn" type="submit"> Изпрати</button>
